@@ -34,13 +34,18 @@
                 <h1 class="name">I'm a recent Computer Science graduate who enjoys building machine learning systems, data-driven applications, and software that solves real-world problems.</h1>
                 <p class="bio">I love exploring new technologies. Recently, I interned at INCOIS where I got hands-on experience with time-series forecasting and deep learning architectures.</p>
                 
-                <div class="hero-buttons">
-                    <a href="Resume.pdf" target="_blank" class="cta-button outline">Resume</a>
-                    <a href="#projects" class="cta-button primary">See my projects</a>
+                <div class="hero-actions">
+                    <div class="hero-buttons">
+                        <a href="Resume.pdf" target="_blank" class="cta-button outline">Resume</a>
+                        <a href="#projects" class="cta-button primary">See my projects</a>
+                    </div>
+                    <div class="availability-badge">
+                        <span class="status-dot">🟢</span> Open to Full-Time Opportunities
+                    </div>
                 </div>
-
-                <div class="availability-badge">
-                    <span class="status-dot">🟢</span> Open to Full-Time Opportunities
+                
+                <div class="selected-tech">
+                    <strong>Python &bull; React &bull; TypeScript &bull; PyTorch &bull; Node.js</strong>
                 </div>
 
                 <div class="featured-achievement mt-3">
@@ -84,7 +89,7 @@
                 <!-- Project 1 -->
                 <div class="project-card card-hover">
                     <div class="project-image-placeholder">
-                        <i class="fas fa-chart-area fa-3x"></i>
+                        <i class="fas fa-chart-area fa-3x project-icon"></i>
                         <span class="placeholder-text">SST Heatmap Image</span>
                     </div>
                     <div class="project-content">
@@ -109,7 +114,7 @@
                 <!-- Project 2 -->
                 <div class="project-card card-hover">
                     <div class="project-image-placeholder">
-                        <i class="fas fa-shield-alt fa-3x"></i>
+                        <i class="fas fa-shield-alt fa-3x project-icon"></i>
                         <span class="placeholder-text">UI Screenshot</span>
                     </div>
                     <div class="project-content">
@@ -135,7 +140,7 @@
                 <!-- Project 3 -->
                 <div class="project-card card-hover">
                     <div class="project-image-placeholder">
-                        <i class="fas fa-hand-paper fa-3x"></i>
+                        <i class="fas fa-hand-paper fa-3x project-icon"></i>
                         <span class="placeholder-text">Webcam Screenshot</span>
                     </div>
                     <div class="project-content">
@@ -160,7 +165,7 @@
                 <!-- Project 4 -->
                 <div class="project-card card-hover">
                     <div class="project-image-placeholder">
-                        <i class="fas fa-film fa-3x"></i>
+                        <i class="fas fa-film fa-3x project-icon"></i>
                         <span class="placeholder-text">Movie UI Screenshot</span>
                     </div>
                     <div class="project-content">
@@ -191,16 +196,16 @@
             <div class="learning-container">
                 <p>I'm always trying to expand my skill set. Right now, I'm focusing my learning on:</p>
                 <ul class="learning-list">
-                    <li><i class="fas fa-robot fa-lg"></i> Agentic AI</li>
+                    <li><i class="fas fa-robot fa-lg"></i> AI Agents</li>
                     <li><i class="fas fa-server fa-lg"></i> Distributed Systems</li>
                     <li><i class="fas fa-chart-area fa-lg"></i> Time-Series Forecasting</li>
                 </ul>
                 <div class="latest-activity">
                     <h4><i class="fas fa-code-branch"></i> Latest Activity</h4>
                     <ul class="activity-list">
-                        <li>🚧 Working on Movie Recommendation App</li>
-                        <li>🤖 Working on Spam-vs-Ham Classifier</li>
-                        <li>🌐 Working on Portfolio Website</li>
+                        <li>🚧 <a href="https://github.com/MedhaMasanam/movie-recommendation-prototype" target="_blank">Working on Movie Recommendation App</a></li>
+                        <li>🤖 <a href="https://github.com/MedhaMasanam/Spam-vs-Ham" target="_blank">Working on Spam-vs-Ham Classifier</a></li>
+                        <li>🌐 <a href="https://github.com/MedhaMasanam/MedhaMasanam.github.io" target="_blank">Working on Portfolio Website</a></li>
                     </ul>
                 </div>
             </div>
@@ -209,7 +214,7 @@
         <section id="contact" class="section contact-section fade-in alternate-bg-2" style="padding-top: 0;">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
-                <p>Feel free to reach out for opportunities, collaborations, or just to say hello.</p>
+                <p>I'm always happy to discuss software engineering, machine learning, or new opportunities. Feel free to reach out!</p>
                 <a href="mailto:medhamasanam.mm@gmail.com" class="cta-button primary">Email Me</a>
             </div>
         </section>
@@ -222,6 +227,7 @@
             <a href="mailto:medhamasanam.mm@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
         </div>
         <p>&copy; 2026 Medha Masanam. Designed and built by Medha Masanam.</p>
+        <p class="last-updated">Last Updated: July 2026</p>
     </footer>
 
     <script>
@@ -242,6 +248,27 @@
 
         document.querySelectorAll('.fade-in').forEach(element => {
             observer.observe(element);
+        });
+
+        // Add scroll active highlight
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
         });
     </script>
 </body>
