@@ -1,12 +1,12 @@
-/* Option A: Deep Navy + White + Teal */
+/* Option A (Refined): High Contrast & Deep Teal Accent */
 :root {
-    --bg-color: #F8FAFC;        /* Light Slate */
-    --card-bg: #FFFFFF;         /* White */
-    --text-primary: #0F172A;    /* Deep Navy */
-    --text-secondary: #475569;  /* Slate */
-    --accent: #0EA5A4;          /* Teal */
-    --accent-hover: #14B8A6;    /* Lighter Teal */
-    --border-color: #E2E8F0;    /* Light Slate Border */
+    --bg-color: #F8FAFC;        /* Light Slate Background */
+    --card-bg: #FFFFFF;         /* White Cards */
+    --text-primary: #111827;    /* High Contrast Dark Text */
+    --text-secondary: #4B5563;  /* High Contrast Slate Text */
+    --accent: #0F766E;          /* Deep Teal */
+    --accent-hover: #0D9488;    /* Lighter Deep Teal */
+    --border-color: #E5E7EB;    /* Light Border */
 }
 
 /* Global Reset & Base Styles */
@@ -111,7 +111,15 @@ header {
     color: var(--accent);
 }
 
-/* Layout Utilities - Reduced Vertical Gaps (Point 11) */
+/* Layout Utilities - Alternating Backgrounds */
+.alternate-bg-1 {
+    background-color: #F8FAFC;
+}
+
+.alternate-bg-2 {
+    background-color: #FFFFFF;
+}
+
 main {
     max-width: 1000px;
     margin: 80px auto 0;
@@ -119,7 +127,7 @@ main {
 }
 
 .section {
-    padding: 80px 0; /* Reduced from 100px */
+    padding: 80px 0;
 }
 
 .section-title {
@@ -149,7 +157,7 @@ main {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 950px; /* Made hero wider as requested */
 }
 
 .greeting {
@@ -169,7 +177,7 @@ main {
 
 .bio {
     font-size: 1.15rem;
-    max-width: 650px;
+    max-width: 700px;
     margin-bottom: 2.5rem;
 }
 
@@ -181,9 +189,9 @@ main {
 
 .cta-button {
     display: inline-block;
-    padding: 0.75rem 1.75rem;
+    padding: 0.85rem 1.75rem;
     border-radius: 6px;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.2s ease;
     cursor: pointer;
 }
@@ -198,7 +206,7 @@ main {
     background-color: var(--accent-hover);
     border-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(14, 165, 164, 0.2);
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
 }
 
 .cta-button.outline {
@@ -222,6 +230,7 @@ main {
     font-size: 0.95rem;
     color: var(--text-secondary);
     display: inline-block;
+    box-shadow: 0 2px 8px rgba(15,23,42,0.05); /* Added subtle shadow */
 }
 
 .featured-achievement strong {
@@ -234,7 +243,7 @@ main {
     padding: 2.5rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(15,23,42,0.05); /* Added subtle shadow */
 }
 
 .card-header {
@@ -278,6 +287,7 @@ main {
 
 .impact strong {
     color: var(--text-primary);
+    font-weight: 600;
 }
 
 /* Interests Grid */
@@ -285,7 +295,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .interest-chip {
@@ -297,6 +307,7 @@ main {
     font-weight: 500;
     color: var(--text-primary);
     transition: transform 0.2s, border-color 0.2s;
+    box-shadow: 0 2px 8px rgba(15,23,42,0.05); /* Added subtle shadow */
 }
 
 .interest-chip i {
@@ -310,6 +321,11 @@ main {
 }
 
 /* Projects Grid */
+.projects-intro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -323,21 +339,31 @@ main {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 2px 8px rgba(15,23,42,0.05); /* Added subtle shadow */
 }
 
 .project-image-placeholder {
     height: 180px;
-    background-color: #F1F5F9;
+    background-color: #F3F4F6;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--border-color);
+    color: #9CA3AF;
     border-bottom: 1px solid var(--border-color);
     transition: background-color 0.3s;
 }
 
+.placeholder-text {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 .project-card:hover .project-image-placeholder {
-    background-color: #E2E8F0;
+    background-color: #E5E7EB;
     color: var(--text-secondary);
 }
 
@@ -369,17 +395,18 @@ main {
 }
 
 .chip {
-    background-color: rgba(14, 165, 164, 0.1);
+    background-color: rgba(15, 118, 110, 0.1);
     color: var(--accent);
-    padding: 0.25rem 0.75rem;
+    padding: 0.35rem 0.85rem; /* Made slightly larger as requested */
     border-radius: 9999px;
-    font-size: 0.75rem;
+    font-size: 0.85rem; /* Made slightly larger as requested */
     font-weight: 600;
 }
 
 .project-links {
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1.25rem;
     border-top: 1px solid var(--border-color);
     padding-top: 1rem;
 }
@@ -414,6 +441,7 @@ main {
     padding: 2.5rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(15,23,42,0.05); /* Added subtle shadow */
 }
 
 .learning-list {
@@ -448,11 +476,15 @@ main {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--text-secondary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.latest-activity p {
-    margin: 0;
+.activity-list {
+    list-style: none;
+}
+
+.activity-list li {
+    margin-bottom: 0.5rem;
     color: var(--text-primary);
     font-size: 0.95rem;
 }
@@ -479,7 +511,7 @@ main {
 footer {
     text-align: center;
     padding: 2rem;
-    background-color: var(--card-bg);
+    background-color: #F8FAFC;
     border-top: 1px solid var(--border-color);
 }
 

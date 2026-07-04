@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
     </header>
 
     <main>
-        <section id="hero" class="hero-section fade-in">
+        <section id="hero" class="hero-section fade-in alternate-bg-1">
             <div class="hero-content">
                 <p class="greeting">Hi, I'm Medha. 👋</p>
                 <h1 class="name">I'm a recent Computer Science graduate who enjoys building machine learning systems, data-driven applications, and software that solves real-world problems.</h1>
@@ -45,7 +45,7 @@
             </div>
         </section>
 
-        <section id="experience" class="section fade-in">
+        <section id="experience" class="section fade-in alternate-bg-2">
             <h2 class="section-title">Experience</h2>
             <div class="experience-card card-hover">
                 <div class="card-header">
@@ -55,14 +55,14 @@
                 <div class="impact">
                     <ul>
                         <li>Built a post-processing pipeline for Arabian Sea Sea Surface Temperature (SST) forecasting.</li>
-                        <li>Evaluated LSTM, N-BEATS, and Salesforce Moirai foundation models for predictive accuracy.</li>
+                        <li>Evaluated <strong>LSTM</strong>, <strong>N-BEATS</strong>, and Salesforce <strong>Moirai</strong> foundation models for predictive accuracy.</li>
                         <li>Achieved <strong>0.108°C RMSE</strong> on independent validation data (Argo floats) at a 7-day horizon.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="interests" class="section fade-in">
+        <section id="interests" class="section fade-in alternate-bg-2" style="padding-top: 0;">
             <h2 class="section-title">What I'm Interested In</h2>
             <div class="interests-grid">
                 <div class="interest-chip"><i class="fas fa-brain"></i> Machine Learning</div>
@@ -72,14 +72,16 @@
             </div>
         </section>
 
-        <section id="projects" class="section fade-in">
+        <section id="projects" class="section fade-in alternate-bg-1">
             <h2 class="section-title">Projects</h2>
+            <p class="projects-intro">Here are a few projects I've enjoyed building during college and my internship.</p>
             <div class="projects-grid">
                 
                 <!-- Project 1 -->
                 <div class="project-card card-hover">
                     <div class="project-image-placeholder">
                         <i class="fas fa-chart-area fa-3x"></i>
+                        <span class="placeholder-text">SST Heatmap</span>
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -95,6 +97,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/MedhaMasanam/INCOIS-SST-Forecasting" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="demo-link"><i class="fas fa-book-open"></i> Read More</a>
                         </div>
                     </div>
                 </div>
@@ -103,6 +106,7 @@
                 <div class="project-card card-hover">
                     <div class="project-image-placeholder">
                         <i class="fas fa-shield-alt fa-3x"></i>
+                        <span class="placeholder-text">UI Screenshot</span>
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -119,6 +123,7 @@
                         <div class="project-links">
                             <a href="#" class="demo-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                             <a href="https://github.com/MedhaMasanam/Spam-vs-Ham" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="demo-link"><i class="fas fa-book-open"></i> Read More</a>
                         </div>
                     </div>
                 </div>
@@ -127,6 +132,7 @@
                 <div class="project-card card-hover">
                     <div class="project-image-placeholder">
                         <i class="fas fa-hand-paper fa-3x"></i>
+                        <span class="placeholder-text">Webcam Screenshot</span>
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -142,6 +148,7 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/MedhaMasanam/Gesture_Media_Player" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="demo-link"><i class="fas fa-book-open"></i> Read More</a>
                         </div>
                     </div>
                 </div>
@@ -150,6 +157,7 @@
                 <div class="project-card card-hover">
                     <div class="project-image-placeholder">
                         <i class="fas fa-film fa-3x"></i>
+                        <span class="placeholder-text">Screenshot</span>
                     </div>
                     <div class="project-content">
                         <div class="project-header">
@@ -166,6 +174,7 @@
                         <div class="project-links">
                             <a href="#" class="demo-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                             <a href="https://github.com/MedhaMasanam/movie-recommendation-prototype" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="demo-link"><i class="fas fa-book-open"></i> Read More</a>
                         </div>
                     </div>
                 </div>
@@ -173,7 +182,7 @@
             </div>
         </section>
 
-        <section id="learning" class="section fade-in">
+        <section id="learning" class="section fade-in alternate-bg-2">
             <h2 class="section-title">Currently Learning 🌱</h2>
             <div class="learning-container">
                 <p>I'm always trying to expand my skill set. Right now, I'm focusing my learning on:</p>
@@ -184,14 +193,18 @@
                 </ul>
                 <div class="latest-activity">
                     <h4><i class="fas fa-code-branch"></i> Latest Activity</h4>
-                    <p>Currently Working On: <strong>Movie Recommendation</strong>, <strong>Spam Classifier</strong>, <strong>Portfolio</strong></p>
+                    <ul class="activity-list">
+                        <li>🚧 Improving Movie Recommendation App</li>
+                        <li>🤖 Building Spam-vs-Ham Classifier</li>
+                        <li>🌐 Refining Portfolio Website</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section contact-section fade-in">
+        <section id="contact" class="section contact-section fade-in alternate-bg-2" style="padding-top: 0;">
             <h2 class="section-title">Get In Touch</h2>
-            <p>I'm currently seeking entry-level Software Engineering and Machine Learning opportunities. I'd love to hear from you.</p>
+            <p>Feel free to reach out for opportunities, collaborations, or just to say hello.</p>
             <a href="mailto:medhamasanam.mm@gmail.com" class="cta-button primary">Email Me</a>
         </section>
     </main>
@@ -202,11 +215,10 @@
             <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
             <a href="mailto:medhamasanam.mm@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
         </div>
-        <p>Designed and built by Medha Masanam</p>
+        <p>&copy; 2026 Medha Masanam. Designed and built by Medha Masanam.</p>
     </footer>
 
     <script>
-        // Simple Intersection Observer for scroll animations
         const observerOptions = {
             root: null,
             rootMargin: '0px',
