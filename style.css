@@ -1,11 +1,11 @@
-/* Option A (Refined): High Contrast & Deep Teal Accent */
+/* Option A (Refined): 9.9/10 Polish */
 :root {
-    --bg-color: #F8FAFC;        /* Light Slate Background */
+    --bg-color: #F9FAFB;        /* Warmer Light Slate */
     --card-bg: #FFFFFF;         /* White Cards */
-    --text-primary: #111827;    /* High Contrast Dark Text */
+    --text-primary: #111827;    /* Sharper Dark Text */
     --text-secondary: #4B5563;  /* High Contrast Slate Text */
     --accent: #0F766E;          /* Deep Teal */
-    --accent-hover: #0D9488;    /* Lighter Deep Teal */
+    --accent-hover: #115E59;    /* Darker Deep Teal for Hover */
     --border-color: #E5E7EB;    /* Light Border */
 }
 
@@ -46,6 +46,11 @@ h1, h2, h3, h4 {
 p {
     color: var(--text-secondary);
     margin-bottom: 1rem;
+}
+
+.highlight-metric {
+    color: var(--accent);
+    font-weight: 700;
 }
 
 /* Navigation */
@@ -111,9 +116,9 @@ header {
     color: var(--accent);
 }
 
-/* Layout Utilities - Alternating Backgrounds */
+/* Layout Utilities */
 .alternate-bg-1 {
-    background-color: #F8FAFC;
+    background-color: #F9FAFB;
 }
 
 .alternate-bg-2 {
@@ -121,7 +126,7 @@ header {
 }
 
 main {
-    max-width: 1000px;
+    max-width: 1040px; /* Increased by 40px for better reading width */
     margin: 80px auto 0;
     padding: 0 5%;
 }
@@ -142,7 +147,7 @@ main {
     position: absolute;
     bottom: -10px;
     left: 0;
-    width: 60px;
+    width: 80px; /* Increased underline length for scanning */
     height: 4px;
     background-color: var(--accent);
     border-radius: 2px;
@@ -157,7 +162,7 @@ main {
 }
 
 .hero-content {
-    max-width: 950px; /* Made hero wider as requested */
+    max-width: 950px;
 }
 
 .greeting {
@@ -170,7 +175,7 @@ main {
 .name {
     font-size: 3rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.15; /* Stronger line height */
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
 }
@@ -184,7 +189,7 @@ main {
 .hero-buttons {
     display: flex;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .cta-button {
@@ -192,7 +197,7 @@ main {
     padding: 0.85rem 1.75rem;
     border-radius: 6px;
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: all 200ms ease; /* Precise button animation */
     cursor: pointer;
 }
 
@@ -205,8 +210,7 @@ main {
 .cta-button.primary:hover {
     background-color: var(--accent-hover);
     border-color: var(--accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+    transform: scale(1.02); /* Pop effect */
 }
 
 .cta-button.outline {
@@ -218,7 +222,26 @@ main {
 .cta-button.outline:hover {
     border-color: var(--accent);
     color: var(--accent);
-    transform: translateY(-2px);
+    transform: scale(1.02); /* Pop effect */
+}
+
+.availability-badge {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 9999px;
+    margin-bottom: 2.5rem;
+}
+
+.status-dot {
+    font-size: 0.7rem;
+    margin-right: 0.25rem;
+    position: relative;
+    top: -1px;
 }
 
 .featured-achievement {
@@ -230,7 +253,7 @@ main {
     font-size: 0.95rem;
     color: var(--text-secondary);
     display: inline-block;
-    box-shadow: 0 2px 8px rgba(15,23,42,0.05); /* Added subtle shadow */
+    box-shadow: 0 6px 20px rgba(15,23,42,.06); /* Refined shadow */
 }
 
 .featured-achievement strong {
@@ -243,7 +266,7 @@ main {
     padding: 2.5rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px rgba(15,23,42,0.05); /* Added subtle shadow */
+    box-shadow: 0 6px 20px rgba(15,23,42,.06);
 }
 
 .card-header {
@@ -301,23 +324,27 @@ main {
 .interest-chip {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 1rem;
+    padding: 0 1rem;
+    height: 52px; /* Fixed height for uniformity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
-    text-align: center;
     font-weight: 500;
     color: var(--text-primary);
-    transition: transform 0.2s, border-color 0.2s;
-    box-shadow: 0 2px 8px rgba(15,23,42,0.05); /* Added subtle shadow */
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 6px 20px rgba(15,23,42,.06);
 }
 
 .interest-chip i {
     color: var(--accent);
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
 }
 
 .interest-chip:hover {
     border-color: var(--accent);
     transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15,23,42,.1); /* Hover shadow increase */
 }
 
 /* Projects Grid */
@@ -339,7 +366,14 @@ main {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 2px 8px rgba(15,23,42,0.05); /* Added subtle shadow */
+    box-shadow: 0 6px 20px rgba(15,23,42,.06);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px); /* Premium hover lift */
+    box-shadow: 0 12px 30px rgba(15,23,42,.1); /* Deeper shadow on hover */
+    border-color: var(--accent); /* Border teal on hover */
 }
 
 .project-image-placeholder {
@@ -395,11 +429,11 @@ main {
 }
 
 .chip {
-    background-color: rgba(15, 118, 110, 0.1);
-    color: var(--accent);
-    padding: 0.35rem 0.85rem; /* Made slightly larger as requested */
+    background-color: #ECFDF5; /* Emerald 50 */
+    color: #065F46; /* Emerald 800 */
+    padding: 0.35rem 0.85rem;
     border-radius: 9999px;
-    font-size: 0.85rem; /* Made slightly larger as requested */
+    font-size: 0.85rem;
     font-weight: 600;
 }
 
@@ -425,23 +459,13 @@ main {
     margin-right: 0.25rem;
 }
 
-/* Hover Animations */
-.card-hover {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card-hover:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
 /* Learning Section */
 .learning-container {
     background-color: var(--card-bg);
     padding: 2.5rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px rgba(15,23,42,0.05); /* Added subtle shadow */
+    box-shadow: 0 6px 20px rgba(15,23,42,.06);
 }
 
 .learning-list {
@@ -502,16 +526,22 @@ main {
     transform: translateX(-50%);
 }
 
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .contact-section p {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem; /* Increased gap */
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 2rem;
-    background-color: #F8FAFC;
+    background-color: #F9FAFB;
     border-top: 1px solid var(--border-color);
 }
 
