@@ -31,13 +31,21 @@
         <section id="hero" class="hero-section fade-in">
             <div class="hero-content">
                 <p class="greeting">Hi, I'm Medha. 👋</p>
-                <h1 class="name">I'm a recent CS graduate passionate about machine learning, data engineering, and building software.</h1>
-                <p class="bio">I love learning new technologies and solving problems. Recently, I interned at INCOIS where I got hands-on experience with time-series forecasting and deep learning.</p>
-                <a href="#projects" class="cta-button">See my projects</a>
+                <h1 class="name">I'm a recent Computer Science graduate who enjoys building machine learning systems, data-driven applications, and software that solves real-world problems.</h1>
+                <p class="bio">I love exploring new technologies. Recently, I interned at INCOIS where I got hands-on experience with time-series forecasting and deep learning architectures.</p>
+                
+                <div class="hero-buttons">
+                    <a href="Resume.pdf" target="_blank" class="cta-button outline">Resume</a>
+                    <a href="#projects" class="cta-button primary">See my projects</a>
+                </div>
+
+                <div class="featured-achievement">
+                    <strong>ML Research Intern @ INCOIS</strong> &bull; Built a four-stage SST forecasting pipeline &bull; Achieved <strong>0.108°C RMSE</strong> on independent validation
+                </div>
             </div>
         </section>
 
-        <section id="experience" class="section">
+        <section id="experience" class="section fade-in">
             <h2 class="section-title">Experience</h2>
             <div class="experience-card card-hover">
                 <div class="card-header">
@@ -46,50 +54,60 @@
                 </div>
                 <div class="impact">
                     <ul>
-                        <li>Gained hands-on experience developing a post-processing pipeline for Sea Surface Temperature forecasting over the Arabian Sea.</li>
-                        <li>Learned to evaluate and work with deep learning models including LSTM, N-BEATS, and the Salesforce Moirai foundation model.</li>
-                        <li>Achieved a <strong>0.108°C RMSE</strong> at a 7-day horizon, validated against independent Argo float profiles.</li>
+                        <li>Built a post-processing pipeline for Arabian Sea Sea Surface Temperature (SST) forecasting.</li>
+                        <li>Evaluated LSTM, N-BEATS, and Salesforce Moirai foundation models for predictive accuracy.</li>
+                        <li>Achieved <strong>0.108°C RMSE</strong> on independent validation data (Argo floats) at a 7-day horizon.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section">
+        <section id="interests" class="section fade-in">
+            <h2 class="section-title">What I'm Interested In</h2>
+            <div class="interests-grid">
+                <div class="interest-chip"><i class="fas fa-brain"></i> Machine Learning</div>
+                <div class="interest-chip"><i class="fas fa-code"></i> Software Engineering</div>
+                <div class="interest-chip"><i class="fas fa-server"></i> Backend Development</div>
+                <div class="interest-chip"><i class="fas fa-network-wired"></i> Distributed Systems</div>
+            </div>
+        </section>
+
+        <section id="projects" class="section fade-in">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 
                 <!-- Project 1 -->
                 <div class="project-card card-hover">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-chart-area fa-3x"></i>
+                    </div>
                     <div class="project-content">
                         <div class="project-header">
-                            <i class="fas fa-chart-line fa-2x project-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/MedhaMasanam/INCOIS-SST-Forecasting" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            </div>
+                            <h3 class="project-title">Ocean Temperature Forecasting</h3>
                         </div>
-                        <h3 class="project-title">Ocean Temperature Forecasting</h3>
                         <p class="project-description">
-                            A learning project exploring how different models predict sea surface temperatures. I compared Moirai, N-BEATS, and LSTM models and built a custom pipeline to handle the data.
+                            Research project completed during my internship at INCOIS. Compared LSTM, N-BEATS, and Moirai models for forecasting Arabian Sea SST.
                         </p>
                         <div class="tech-stack">
-                            <span class="chip">Python</span>
                             <span class="chip">PyTorch</span>
-                            <span class="chip">Moirai</span>
+                            <span class="chip">N-BEATS</span>
                             <span class="chip">NetCDF4</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MedhaMasanam/INCOIS-SST-Forecasting" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card card-hover">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-shield-alt fa-3x"></i>
+                    </div>
                     <div class="project-content">
                         <div class="project-header">
-                            <i class="fas fa-shield-alt fa-2x project-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/MedhaMasanam/Spam-vs-Ham" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            </div>
+                            <h3 class="project-title">Spam-vs-Ham SMS Classifier</h3>
                         </div>
-                        <h3 class="project-title">Spam-vs-Ham SMS Classifier</h3>
                         <p class="project-description">
                             A full-stack web application that uses the Google Gemini LLM API to classify SMS messages as spam or valid ("ham") in real-time.
                         </p>
@@ -98,80 +116,115 @@
                             <span class="chip">TypeScript</span>
                             <span class="chip">Gemini API</span>
                         </div>
+                        <div class="project-links">
+                            <a href="#" class="demo-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/MedhaMasanam/Spam-vs-Ham" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
                 <div class="project-card card-hover">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-hand-paper fa-3x"></i>
+                    </div>
                     <div class="project-content">
                         <div class="project-header">
-                            <i class="fas fa-hand-paper fa-2x project-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/MedhaMasanam/Gesture_Media_Player" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            </div>
+                            <h3 class="project-title">Gesture Media Player</h3>
                         </div>
-                        <h3 class="project-title">Gesture Media Player</h3>
                         <p class="project-description">
-                            A computer vision application built during college that lets users pause, play, and control volume on their computer using hand gestures via a webcam.
+                            A computer vision application that lets users pause, play, and control volume on their computer using hand gestures via a webcam.
                         </p>
                         <div class="tech-stack">
                             <span class="chip">Python</span>
                             <span class="chip">OpenCV</span>
                             <span class="chip">MediaPipe</span>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MedhaMasanam/Gesture_Media_Player" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
                 <div class="project-card card-hover">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-film fa-3x"></i>
+                    </div>
                     <div class="project-content">
                         <div class="project-header">
-                            <i class="fas fa-film fa-2x project-icon"></i>
-                            <div class="project-links">
-                                <a href="https://github.com/MedhaMasanam/movie-recommendation-prototype" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            </div>
+                            <h3 class="project-title">Movie Recommendation App</h3>
                         </div>
-                        <h3 class="project-title">Movie Recommendation App</h3>
                         <p class="project-description">
-                            A full-stack prototype that allows users to browse movies and receive personalized recommendations. Built to learn React and backend API integrations.
+                            A full-stack prototype that allows users to browse movies and receive personalized recommendations. Built to learn React and backend APIs.
                         </p>
                         <div class="tech-stack">
                             <span class="chip">React</span>
                             <span class="chip">Node.js</span>
                             <span class="chip">Express</span>
                         </div>
+                        <div class="project-links">
+                            <a href="#" class="demo-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/MedhaMasanam/movie-recommendation-prototype" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </section>
 
-        <section id="learning" class="section">
+        <section id="learning" class="section fade-in">
             <h2 class="section-title">Currently Learning 🌱</h2>
             <div class="learning-container">
                 <p>I'm always trying to expand my skill set. Right now, I'm focusing my learning on:</p>
                 <ul class="learning-list">
-                    <li><i class="fas fa-robot"></i> AI Agents & Prompt Engineering</li>
+                    <li><i class="fas fa-robot"></i> Agentic AI</li>
                     <li><i class="fas fa-server"></i> Distributed Systems</li>
                     <li><i class="fas fa-chart-area"></i> Time-Series Forecasting</li>
                 </ul>
+                <div class="latest-activity">
+                    <h4><i class="fas fa-code-branch"></i> Latest Activity</h4>
+                    <p>Currently Working On: <strong>Movie Recommendation</strong>, <strong>Spam Classifier</strong>, <strong>Portfolio</strong></p>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="section contact-section">
+        <section id="contact" class="section contact-section fade-in">
             <h2 class="section-title">Get In Touch</h2>
-            <p>I'm currently looking for junior or entry-level roles in Software Engineering and Machine Learning. I'd love to connect!</p>
-            <a href="mailto:medhamasanam.mm@gmail.com" class="cta-button">Email Me</a>
+            <p>I'm currently seeking entry-level Software Engineering and Machine Learning opportunities. I'd love to hear from you.</p>
+            <a href="mailto:medhamasanam.mm@gmail.com" class="cta-button primary">Email Me</a>
         </section>
     </main>
 
     <footer>
-        <div class="footer-socials">
+        <div class="footer-socials fade-in">
             <a href="https://github.com/MedhaMasanam" target="_blank"><i class="fab fa-github fa-lg"></i></a>
             <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
             <a href="mailto:medhamasanam.mm@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
         </div>
-        <p>Built by Medha Masanam</p>
+        <p>Designed and built by Medha Masanam</p>
     </footer>
+
+    <script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
 </body>
 </html>
