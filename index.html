@@ -3,100 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medha Masanam | ML Engineer</title>
+    <title>Medha Masanam | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">Medha.ML</div>
+            <div class="logo fade-in">Medha.</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="nav-socials">
+                    <a href="https://github.com/MedhaMasanam" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="hero" class="hero-section">
+        <section id="hero" class="hero-section fade-in">
             <div class="hero-content">
-                <p class="greeting">Hi, my name is</p>
-                <h1 class="name">Medha Masanam.</h1>
-                <h2 class="role">I build predictive models for complex systems.</h2>
-                <p class="bio">I am a Machine Learning Engineer specializing in Time-Series Forecasting and Data Engineering. Currently focused on applying foundation models to operational oceanography.</p>
-                <a href="#projects" class="cta-button">Check out my work!</a>
+                <p class="greeting">Hi, I'm Medha. 👋</p>
+                <h1 class="name">I'm a recent CS graduate passionate about machine learning, data engineering, and building software.</h1>
+                <p class="bio">I love learning new technologies and solving problems. Recently, I interned at INCOIS where I got hands-on experience with time-series forecasting and deep learning.</p>
+                <a href="#projects" class="cta-button">See my projects</a>
             </div>
         </section>
 
         <section id="experience" class="section">
             <h2 class="section-title">Experience</h2>
-            <div class="experience-card">
-                <h3>ML Research Intern @ INCOIS</h3>
-                <p class="date">2026</p>
-                <ul class="experience-list">
-                    <li>Developed a 4-Stage Post-Processing Pipeline for Sea Surface Temperature forecasting over the Arabian Sea.</li>
-                    <li>Evaluated and fine-tuned LSTM, N-BEATS, and the Salesforce Moirai foundation model.</li>
-                    <li>Achieved a 0.108°C RMSE at a 7-day horizon, validated against 37 independent Argo float profiles.</li>
-                </ul>
+            <div class="experience-card card-hover">
+                <div class="card-header">
+                    <h3>ML Research Intern @ INCOIS</h3>
+                    <span class="date">2026</span>
+                </div>
+                <div class="impact">
+                    <ul>
+                        <li>Gained hands-on experience developing a post-processing pipeline for Sea Surface Temperature forecasting over the Arabian Sea.</li>
+                        <li>Learned to evaluate and work with deep learning models including LSTM, N-BEATS, and the Salesforce Moirai foundation model.</li>
+                        <li>Achieved a <strong>0.108°C RMSE</strong> at a 7-day horizon, validated against independent Argo float profiles.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="projects" class="section">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 
-                <div class="project-card">
+                <!-- Project 1 -->
+                <div class="project-card card-hover">
                     <div class="project-content">
-                        <p class="project-label">Featured Project</p>
-                        <h3 class="project-title"><a href="https://github.com/MedhaMasanam123/satelliteGAN" target="_blank">INCOIS SST Forecasting</a></h3>
+                        <div class="project-header">
+                            <i class="fas fa-chart-line fa-2x project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/MedhaMasanam/INCOIS-SST-Forecasting" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Ocean Temperature Forecasting</h3>
                         <p class="project-description">
-                            A comprehensive forecasting pipeline comparing Moirai, N-BEATS, and LSTM for predicting sea surface temperatures. Features a novel 4-stage post-processing technique involving Ridge regression and spatial correction maps.
+                            A learning project exploring how different models predict sea surface temperatures. I compared Moirai, N-BEATS, and LSTM models and built a custom pipeline to handle the data.
                         </p>
-                        <ul class="project-tech">
-                            <li>PyTorch</li>
-                            <li>uni2ts (Moirai)</li>
-                            <li>NetCDF4</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/MedhaMasanam/INCOIS-SST-Forecasting" target="_blank">GitHub</a>
+                        <div class="tech-stack">
+                            <span class="chip">Python</span>
+                            <span class="chip">PyTorch</span>
+                            <span class="chip">Moirai</span>
+                            <span class="chip">NetCDF4</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <!-- Project 2 -->
+                <div class="project-card card-hover">
                     <div class="project-content">
-                        <p class="project-label">Computer Vision</p>
-                        <h3 class="project-title"><a href="https://github.com/MedhaMasanam/Gesture_Media_Player" target="_blank">Gesture Media Player</a></h3>
+                        <div class="project-header">
+                            <i class="fas fa-shield-alt fa-2x project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/MedhaMasanam/Spam-vs-Ham" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Spam-vs-Ham SMS Classifier</h3>
                         <p class="project-description">
-                            A computer vision application developed during college that allows users to control media playback using hand gestures via webcam input.
+                            A full-stack web application that uses the Google Gemini LLM API to classify SMS messages as spam or valid ("ham") in real-time.
                         </p>
-                        <ul class="project-tech">
-                            <li>Python</li>
-                            <li>OpenCV</li>
-                            <li>MediaPipe</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/MedhaMasanam/Gesture_Media_Player" target="_blank">GitHub</a>
+                        <div class="tech-stack">
+                            <span class="chip">React</span>
+                            <span class="chip">TypeScript</span>
+                            <span class="chip">Gemini API</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Project 3 -->
+                <div class="project-card card-hover">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-hand-paper fa-2x project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/MedhaMasanam/Gesture_Media_Player" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Gesture Media Player</h3>
+                        <p class="project-description">
+                            A computer vision application built during college that lets users pause, play, and control volume on their computer using hand gestures via a webcam.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="chip">Python</span>
+                            <span class="chip">OpenCV</span>
+                            <span class="chip">MediaPipe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card card-hover">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-film fa-2x project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/MedhaMasanam/movie-recommendation-prototype" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Movie Recommendation App</h3>
+                        <p class="project-description">
+                            A full-stack prototype that allows users to browse movies and receive personalized recommendations. Built to learn React and backend API integrations.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="chip">React</span>
+                            <span class="chip">Node.js</span>
+                            <span class="chip">Express</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="learning" class="section">
+            <h2 class="section-title">Currently Learning 🌱</h2>
+            <div class="learning-container">
+                <p>I'm always trying to expand my skill set. Right now, I'm focusing my learning on:</p>
+                <ul class="learning-list">
+                    <li><i class="fas fa-robot"></i> AI Agents & Prompt Engineering</li>
+                    <li><i class="fas fa-server"></i> Distributed Systems</li>
+                    <li><i class="fas fa-chart-area"></i> Time-Series Forecasting</li>
+                </ul>
             </div>
         </section>
 
         <section id="contact" class="section contact-section">
             <h2 class="section-title">Get In Touch</h2>
-            <p>I'm currently looking for new opportunities in Machine Learning and Data Engineering. My inbox is always open!</p>
-            <a href="mailto:medhamasanam.mm@gmail.com" class="cta-button outline">Say Hello</a>
+            <p>I'm currently looking for junior or entry-level roles in Software Engineering and Machine Learning. I'd love to connect!</p>
+            <a href="mailto:medhamasanam.mm@gmail.com" class="cta-button">Email Me</a>
         </section>
     </main>
 
     <footer>
+        <div class="footer-socials">
+            <a href="https://github.com/MedhaMasanam" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="mailto:medhamasanam.mm@gmail.com"><i class="fas fa-envelope fa-lg"></i></a>
+        </div>
         <p>Built by Medha Masanam</p>
     </footer>
 </body>
