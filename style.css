@@ -497,6 +497,64 @@ main {
     margin-right: 0.25rem;
 }
 
+/* Certifications Grid */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cert-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 2px 8px rgba(15,23,42,.04);
+}
+
+.cert-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15,23,42,.06); 
+}
+
+.cert-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #F3F4F6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.25rem;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.cert-card:hover .cert-icon {
+    background-color: #ECFDF5;
+    color: #0F766E;
+}
+
+.cert-info h4 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.cert-info span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
 /* Learning Section */
 .learning-container {
     background-color: var(--card-bg);
